@@ -1,0 +1,74 @@
+* { text-align: center;}
+
+h1 {
+    font-family: 'Dela Gothic One', cursive;
+    margin: 20px;
+    font-size: 50px;
+    background-color: cornflowerblue;
+}
+
+h2{ 
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 35px;
+}
+
+h4{
+    font-family:'Do Hyeon', sans-serif;
+    font-size: 25px;
+    margin : 0;
+}
+
+.box{
+    height : 10px;
+    padding: 25px;
+    margin : 5px;
+}
+.loginbox{
+    height : 50px;
+    padding: 45px;
+    margin: 10px;
+}
+
+.box label{
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 18px;
+}
+.loginbox label{
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 25px;
+}
+
+.box input{
+    font-size: 17px;
+    padding: 2px;
+    border: none;
+    border-bottom: 3px solid black;
+}
+.loginbox input{
+    font-size: 20px;
+    padding: 5px;
+    border: none;
+    border-bottom: 3px solid black;
+}
+
+input:focus, input:hover {
+    font-size: 15px;
+    border: none;
+    border-bottom: 3px solid cornflowerblue;
+    outline:none;
+}
+
+.button{
+    font-family: 'Dela Gothic One', cursive;
+    height : 35px;
+    width: 100px;
+    margin : 10px;
+    background-color: darkorange;
+    border: none;
+    border-radius: 10%;
+}
+
+a{
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 20px;
+}
