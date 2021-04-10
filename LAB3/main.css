@@ -151,7 +151,7 @@ section{
     width:1020px;
     margin:auto;
 }
-section h4{
+section.introduce h4{
     font-family: 'Do Hyeon', sans-serif;
     font-size: 25px;
     text-align: left;
