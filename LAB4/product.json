@@ -1,0 +1,74 @@
+[
+    {
+        "category": "burger",
+        "name": "BigMacBurger",
+        "price": 4000,
+        "img": "bigmac.png"
+    },
+    {
+        "category": "muffin",
+        "name": "BLTEggMuffin",
+        "price": 4000,
+        "img": "blt.png"
+    },
+    {
+        "category": "chiller",
+        "name": "PearChiller",
+        "price": 6000,
+        "img": "pear.png"
+    },
+    {
+        "category": "muffin",
+        "name": "EggMuffin",
+        "price": 5000,
+        "img": "egg.png"
+    },
+    {
+        "category": "mcflurry",
+        "name": "VeryStrawberryMcFlurry",
+        "price": 5000,
+        "img": "verystrawberry.png"
+    },
+    {
+        "category": "burger",
+        "name": "MacSpicyShanghaiBurger",
+        "price": 5000,
+        "img": "macspicy.png"
+    },
+    {
+        "category": "muffin",
+        "name": "BaconEggMuffin",
+        "price": 6000,
+        "img": "bacon.png"
+    },
+    {
+        "category": "mcflurry",
+        "name": "OreoMcFlurry",
+        "price": 5000,
+        "img": "oreo.png"
+    },
+    {
+        "category": "chiller",
+        "name": "AppleMangoChiller",
+        "price": 6000,
+        "img": "applemango.png"
+    },
+    {
+        "category": "burger",
+        "name": "1955Burger",
+        "price": 6000,
+        "img": "1955.png"
+    },
+    {
+        "category": "mcflurry",
+        "name": "ChocoOreoMcFlurry",
+        "price": 5000,
+        "img": "choco.png"
+    },
+    {
+        "category": "chiller",
+        "name": "JejuHallabongChiller",
+        "price": 6000,
+        "img": "jeju.png"
+    }
+]
