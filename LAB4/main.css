@@ -24,6 +24,7 @@ header h2{
     animation-name: moving;
     animation-duration: 2s;
     animation-delay: .5s;
+    animation-iteration-count: infinite;
 }
 @keyframes moving{
     from{ margin-left: 50%;}
@@ -110,7 +111,7 @@ input:focus, input:hover {
 /* figure - index*/
 #list{
     font-family: 'Do Hyeon', sans-serif;
-    font-size: 25px;
+    font-size: 30px;
     margin : 15px 10px 10px;
     text-align: left; 
 }
@@ -154,7 +155,7 @@ figure img:hover{
 
 /* section introduce - index */
 section.introduce h4{
-    font-size: 25px;
+    font-size: 30px;
     text-align: left;
     margin : 10px ;
 }
@@ -168,7 +169,7 @@ section.introduce div{
     column-rule-style: double;
 }
 section.choosebar h4{
-    font-size: 25px;
+    font-size: 30px;
     margin : 15px 10px 10px;
     text-align: left; 
 }
