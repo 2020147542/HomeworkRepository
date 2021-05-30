@@ -33,7 +33,7 @@
                     &nbsp &nbsp현재 위치의 주소
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body" style="margin : auto">
+                <div class="modal-body">
 
                     <form action='/upload' method="post" enctype="multipart/form-data">
 
@@ -46,10 +46,11 @@
                             <input type="file" id="photoInput" name="photoUpload[]" multiple />
                         </lable>
                         <br>
+                        <br>
                         <label id="multiple-container">사진 뜨기</label>
                         <br>
                         <br>
-                        <lable> 감상업로드
+                        <lable> 감상업로드<br>
                             <textarea cols="38" rows="10" name="comment"
                                 placeholder="여러분이 느낀 이 곳만의 공기, 분위기, 추억등을 자유롭게 글로 남겨주세요!"></textarea>
                         </lable>
@@ -113,7 +114,7 @@
                             console.log(file.name);
                             $img.src = e.target.result;
                             $img.arc = file.name;
-                            $img.style.width = "20%";
+                            $img.style.width = "40%";
                         }
 
                         //container에 넣고, 이미지 로드
