@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>McDonald's login_page</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1> McDonald's </h1>
+        <hr />
+    </header>
+
+    <nav>
+        <a href="/">메인</a>
+        <a href="/signup">회원가입</a>
+        로그인
+        <hr />
+    </nav>
+
+    <section>
+        <h4> 회원정보 </h4>
+        <form method="post">
+            <p class="loginbox"><label>아이디<br>
+                    <input name="id" type="text" placeholder="ID를 입력하세요." autofocus required>
+                </label></p>
+
+            <p class="loginbox"><label>비밀번호<br>
+                    <input name="pw" type="password" placeholder="비밀번호를 입력하세요." required>
+                </label></p>
+
+            <input class="button" type="submit" value="login">
+            <input class="button" type="reset" value="cancel">
+            <br>
+        </form>
+    </section>
+</body>
+
+</html>

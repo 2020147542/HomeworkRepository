@@ -1,0 +1,117 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>McDonald's main page</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&fdisplay=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&fdisplay=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="#">
+
+</head>
+
+<body>
+    <header>
+        <h2 id="home"> WELCOME TO McDonald's</h2>
+        <hr />
+    </header>
+
+    <nav>
+        메인
+        <a href="/signup"> 회원가입</a>
+        <a href="/login"> 로그인 </a>
+        <hr>
+    </nav>
+
+    <section class="introduce">
+        <h4> 페이지 소개</h4>
+        <div>
+            여기는 맥도날드 인터넷 상점입니다.
+            환영합니다. 여기는 맥도날드 인터넷 상점입니다.
+            환영합니다. 여기는 맥도날드 인터넷 상점입니다.
+            환영합니다. 여기는 맥도날드 인터넷 상점입니다.
+            환영합니다. 여기는 맥도날드 인터넷 상점입니다.
+            환영합니다. 여기는 맥도날드 인터넷 상점입니다.
+            환영합니다. 여기는 맥도날드 인터넷 상점입니다.
+            환영합니다. 여기는 맥도날드 인터넷 상점입니다.
+            환영합니다. 여기는 맥도날드 인터넷 상점입니다.
+            환영합니다. 여기는 맥도날드 인터넷 상점입니다.
+        </div>
+    </section>
+
+    <section class="choosebar">
+        <h4> 상품 검색 </h4>
+        <label> Category :
+            <select id="category">
+                <option id="all" value="all">All</option>
+                <% for (var a of clist) { %>
+                    <option id="<%= a.product_category%>" value="<%= a.product_category%>">
+                        <%= a.product_category %>
+                    </option>
+                    <% } %>
+            </select>
+        </label>
+        <span> &nbsp; &nbsp; &nbsp; &nbsp;</span>
+        <label> KeyWord :
+            <input id="keyword" type="text" placeholder="Enter search item">
+        </label>
+        <button class="button" onclick="search()">Filter</button>
+    </section>
+
+    <h4 id="list"> 상품 목록</h4>
+    <figure id="figure">
+        <% if(img=="" ) {%>
+            <p id="lost"> 찾는 내용이 없습니다. 다시 검색해 주세요!</p>
+            <% } else { %>
+                <% for (var a of img) { %>
+                    <div> <img src="<%= a.product_image%>" alt="<%= a.product_id%> 번째 메뉴 사진입니다."
+                            onclick="detail('<%=a.product_id%>')">
+                    </div>
+                    <% } %>
+                        <%}%>
+    </figure>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById("<%= hello%>").setAttribute("selected", "selected");
+            document.querySelector('#home').onclick = function () {
+                location.href = '/';
+            }
+        })
+
+        function detail(id) {
+            var xml = new XMLHttpRequest;
+            xml.onreadystatechange = function () {
+                console.log("detail 페이지로 이동");
+                location.href = `/product/:${id}`;
+            }
+            xml.open('GET', `/product/:${id}`);
+            xml.send();
+        }
+
+        function search() {
+            let cat = document.querySelector('select').value;
+            let word = document.querySelector('#keyword').value;
+            let go = "";
+            let xml1 = new XMLHttpRequest;
+
+            if (word == '') {
+                xml1.open('GET', `/search?category=${cat}`);
+                go = `/search?category=${cat}`;
+            }
+            else {
+                xml1.open('GET', `/search?category=${cat}&keyword=${word}`);
+                go = `/search?category=${cat}&keyword=${word}`;
+            }
+            xml1.send();
+
+            xml1.onreadystatechange = function () {
+                location.href = go;
+            }
+        }
+    </script>
+</body>
+
+</html>

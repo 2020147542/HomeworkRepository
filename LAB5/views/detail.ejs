@@ -1,0 +1,76 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>McDonald's main page</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&fdisplay=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&fdisplay=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="#">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h2 id="home"> WELCOME TO McDonald's</h2>
+        <hr />
+    </header>
+
+    <nav>
+        메인
+        <a href="/signup"> 회원가입</a>
+        <a href="/login"> 로그인 </a>
+        <hr>
+    </nav>
+
+    <div id="detail">
+        <h2 id="title">
+            <%= one[0].product_title %>
+        </h2>
+        <div>
+            <img id="image" src="<%= one[0].product_image.slice(1) %>" alt="product_id = <%= one[0].product_id %>">
+        </div>
+        <p id="product_id">
+            이 제품은 <%= one[0].product_id %>번째(ID) 메뉴입니다
+        </p>
+        <p id="category">
+            category : <%= one[0].product_category %>
+        </p>
+        <p id="price">
+            Price : &#8361;<%= one[0].product_price %>
+        </p>
+        <textarea id="commented" placeholder="댓글을 남겨주세요"></textarea>
+        <button type="button" id="btnn">comment</button>
+        <div id="clist">
+            <% while(num> 0) { %>
+                <% num--; %>
+                    <hr>
+                    <div>
+                        <%= content[num]%>
+                    </div>
+                    <hr>
+                    <% } %>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('#home').onclick = function () {
+            location.href = '/';
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            $("#btnn").click(function () {
+                let add = document.querySelector('#commented').value;
+                $.post("/product/:<%=one[0].product_id%>", {
+                    comment: add, id: "<%=one[0].product_id %>"
+                }, function (data, status) {
+                    console.log("댓글 추가 완료");
+                    document.querySelector('#commented').value = "";
+                });
+            });
+        })
+    </script>
+</body>
+
+</html>
